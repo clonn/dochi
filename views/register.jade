@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1 Register
+  form(action="/register", method="POST")
+    div.row
+      label Email
+      input(name="email" type="email", required, placehoder="please input your email")
+    div.row
+      label Score 
+      input(name="score" type="number", required, placehoder="please input your Number")
+    div.row.button
+      input(name="Submit", value="Sbumit")
