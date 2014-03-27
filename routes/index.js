@@ -11,3 +11,7 @@ exports.index = function(req, res){
 exports.register = function(req, res){
   res.render('register', { title: 'Express' });
 };
+
+exports.registerPost = function(req, res){
+  res.render('register', { title: 'Express' });
+};
