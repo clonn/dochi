@@ -9,6 +9,22 @@ exports.index = function(req, res){
   res.render('index', { title: 'Express' });
 };
 
+exports.add = function(req, res){
+  var id = req.params["id"];
+  console.log("id: " + id);
+  User.update({
+    _id: id
+  }, {
+    $inc: {score: 20}
+  }, function (err, result) {
+    console.log(result);
+    console.log(err);
+    console.log("add score success");
+    res.redirect("/register");
+  });
+  
+};
+
 
 exports.register = function(req, res){
   User.find({ 
